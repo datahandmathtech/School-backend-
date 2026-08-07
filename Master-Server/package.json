@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
+    "postinstall": "npm install --prefix \"./Auto/backend\" && npm install --prefix \"./Emjay Brewery/backend\" && npm install --prefix \"./Smokey Jo's Cafe/Yatree- Destination/server\" && npm install --prefix \"./Unnati Arts/backend\" && npm install --prefix \"./TEXI/taxi-fleet-crm\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
