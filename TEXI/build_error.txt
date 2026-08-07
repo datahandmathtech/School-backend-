@@ -1,0 +1,40 @@
+
+> client@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mG£ô[39m 30 modules transformed.
+[31mG£ù[39m Build failed in 173ms
+[31merror during build:
+[31m[vite:esbuild] Transform failed with 2 errors:
+C:/Users/ABHAY/OneDrive/Desktop/TEXI/taxi-fleet-crm/client/src/pages/Parking.jsx:1376:14: ERROR: Unexpected closing "div" tag does not match opening fragment tag
+C:/Users/ABHAY/OneDrive/Desktop/TEXI/taxi-fleet-crm/client/src/pages/Parking.jsx:1377:12: ERROR: Unterminated regular expression[31m
+file: [36mC:/Users/ABHAY/OneDrive/Desktop/TEXI/taxi-fleet-crm/client/src/pages/Parking.jsx:1376:14[31m
+[33m
+[33mUnexpected closing "div" tag does not match opening fragment tag[33m
+1374 |                  </AnimatePresence>
+1375 |  
+1376 |              </div>
+     |                ^
+1377 |          </>)
+1378 |  }
+System.Management.Automation.RemoteException
+[33mUnterminated regular expression[33m
+1375 |  
+1376 |              </div>
+1377 |          </>)
+     |              ^
+1378 |  }
+1379 |  
+[31m
+    at failureErrorWithLog (C:\Users\ABHAY\OneDrive\Desktop\TEXI\taxi-fleet-crm\client\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\ABHAY\OneDrive\Desktop\TEXI\taxi-fleet-crm\client\node_modules\esbuild\lib\main.js:736:50
+    at responseCallbacks.<computed> (C:\Users\ABHAY\OneDrive\Desktop\TEXI\taxi-fleet-crm\client\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\ABHAY\OneDrive\Desktop\TEXI\taxi-fleet-crm\client\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\ABHAY\OneDrive\Desktop\TEXI\taxi-fleet-crm\client\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:519:28)
+    at addChunk (node:internal/streams/readable:561:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+    at Readable.push (node:internal/streams/readable:392:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)[39m

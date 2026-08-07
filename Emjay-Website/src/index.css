@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-color: #Eee9de; /* Cream/Sand background */
+  --text-main: #332116; /* Deep brown/black */
+  --text-muted: #5c4e43;
+  --primary: #863d27; /* Rich brownish red / Terracotta */
+  --primary-hover: #672d1c;
+  --accent-green: #6a7448; /* Olive green */
+  
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(134, 61, 39, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Global button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  background-color: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  border-radius: 4px; /* Slightly rounded edges instead of fully rounded */
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  background-color: transparent;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--text-main);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: rgba(51, 33, 22, 0.05);
+}
+
+/* Common Section padding */
+.section {
+  padding: 6rem 8%;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 5rem 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 5%;
+  }
+  .btn-primary, .btn-outline {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   GLOBAL RESPONSIVE OVERRIDES (max-width: 900px)
+   Used to convert absolute-positioned desktop views 
+   to stacked flex columns on mobile.
+========================================================= */
+@media (max-width: 900px) {
+  .resp-container {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+    min-height: auto !important;
+    aspect-ratio: auto !important;
+  }
+  .resp-bg-img {
+    position: relative !important;
+    width: 100% !important;
+    height: 35vh !important;
+    min-height: 250px !important;
+    object-fit: cover !important;
+  }
+  .resp-overlay-box {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    padding: 40px 5% !important;
+    text-align: center !important;
+  }
+  .resp-text-h1 {
+    font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 20px !important;
+  }
+  .resp-text-h2 {
+    font-size: clamp(2rem, 7vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 15px !important;
+  }
+  .resp-text-h3 {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .resp-text-p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
+  }
+  .resp-text-small {
+    font-size: 13px !important;
+  }
+  .resp-flex-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .resp-flex-wrap {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .resp-hide {
+    display: none !important;
+  }
+  .resp-w-full {
+    width: 100% !important;
+  }
+  .resp-gap {
+    gap: 20px !important;
+  }
+  .resp-mb {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* =========================================================
+   ANTI-SAVE & ANTI-DRAG FOR ALL IMAGES
+   Prevents users from long-pressing to save or dragging 
+   the images, making them feel like native app backgrounds.
+========================================================= */
+img {
+  -webkit-touch-callout: none; /* Disable long-press popup on iOS */
+  -webkit-user-select: none;   /* Disable selection on iOS/Safari */
+  -khtml-user-select: none;    /* Konqueror HTML */
+  -moz-user-select: none;      /* Old Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* Standard syntax */
+  
+  -webkit-user-drag: none;     /* Safari/Chrome */
+  -khtml-user-drag: none;      /* Konqueror HTML */
+  -moz-user-drag: none;        /* Old Firefox */
+  -o-user-drag: none;          /* Opera */
+  user-drag: none;             /* Standard syntax */
+}

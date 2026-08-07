@@ -1,0 +1,297 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-outfit), "Outfit", sans-serif;
+  --font-body: var(--font-jakarta), "Plus Jakarta Sans", sans-serif;
+  --font-mono: var(--font-inter), "Inter", sans-serif;
+
+  --color-midnight: #020617;
+  --color-navy-950: #020617;
+  --color-navy-900: #0f172a;
+  --color-gold-premium: #d4af37;
+  --color-gold-light: #f1e4bc;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-900: #0f172a;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  /* Advanced Easing Tokens */
+  --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-expo-in-out: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-back-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #020617;
+    --primary: #d4af37; /* Champagne Gold */
+    --accent: #f97316;  /* Keeping the orange as a vibrant accent */
+    --muted: #f8fafc;
+    --border: #e2e8f0;
+    --dark-bg: #020617;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: transparent;
+    color: var(--foreground);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    z-index: 9999;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--midnight);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  /* Custom Selection */
+  ::selection {
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+@layer components {
+  /* Performance Optimized Sections */
+  section {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 500px;
+  }
+
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+
+  .container-custom {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Professional Cards - Optimized Transitions */
+  .card-modern {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    will-change: transform, box-shadow;
+  }
+  .card-modern:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  /* Professional Buttons - Optimized */
+  .btn-primary {
+    @apply h-12 px-8 rounded-lg text-white font-bold transition-[background-color,transform,box-shadow] duration-300 hover:shadow-lg active:scale-95 flex items-center justify-center gap-2;
+    background-color: var(--primary);
+    will-change: transform;
+  }
+  .btn-primary:hover {
+    filter: brightness(1.1);
+  }
+
+  .btn-outline {
+    @apply h-12 px-8 rounded-lg border-2 text-slate-900 font-bold transition-[background-color,color,transform] duration-300 hover:bg-slate-900 hover:text-white active:scale-95 flex items-center justify-center gap-2;
+    border-color: var(--primary);
+    color: var(--primary);
+    will-change: transform;
+  }
+
+  /* Modern Input Style */
+  .input-modern {
+    @apply w-full h-12 px-4 rounded-lg bg-slate-50 border border-slate-200 focus:bg-white focus:ring-2 outline-none transition-[border-color,background-color,box-shadow] duration-200;
+    &:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary), transparent 80%);
+    }
+  }
+
+  /* Glassmorphism Utilities */
+  .glass-premium {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-xl bg-midnight/40 border border-white/5 shadow-2xl;
+  }
+
+  /* Grain/Noise Effect */
+  .grain-overlay {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.05;
+      z-index: 50;
+    }
+  }
+}
+
+/* Simplified Animations */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Clean Transitions */
+.transition-smooth {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   3D SCROLL BACKGROUND GLOBAL INTEGRATION OVERRIDES
+   ========================================================================== */
+
+/* 1. Force section and page backgrounds to be transparent when 3D Canvas is active */
+html:has(#three-d-scroll-bg),
+body:has(#three-d-scroll-bg),
+body:has(#three-d-scroll-bg) main,
+body:has(#three-d-scroll-bg) section,
+body:has(#three-d-scroll-bg) .bg-white,
+body:has(#three-d-scroll-bg) .bg-slate-50,
+body:has(#three-d-scroll-bg) .bg-slate-100 {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* 2. Style cards, cards-modern, and other containers with ultra-premium glassmorphism */
+body:has(#three-d-scroll-bg) .card-modern,
+body:has(#three-d-scroll-bg) [class*="bg-white/5"],
+body:has(#three-d-scroll-bg) [class*="bg-slate-50/5"] {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Light mode card styling */
+html:not(.dark) body:has(#three-d-scroll-bg) .card-modern,
+html:not(.dark) body:has(#three-d-scroll-bg) .bg-white {
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Dark mode card styling */
+html.dark body:has(#three-d-scroll-bg) .card-modern,
+html.dark body:has(#three-d-scroll-bg) .bg-slate-900,
+html.dark body:has(#three-d-scroll-bg) .bg-slate-950,
+html.dark body:has(#three-d-scroll-bg) .bg-navy-950 {
+  background-color: rgba(15, 23, 42, 0.55) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 3. Typography Color Fixes for Perfect Contrast on Dark/Light 3D Canvas */
+
+/* Light Theme Contrast */
+html:not(.dark) body:has(#three-d-scroll-bg) h1,
+html:not(.dark) body:has(#three-d-scroll-bg) h2,
+html:not(.dark) body:has(#three-d-scroll-bg) h3,
+html:not(.dark) body:has(#three-d-scroll-bg) h4,
+html:not(.dark) body:has(#three-d-scroll-bg) h5,
+html:not(.dark) body:has(#three-d-scroll-bg) h6,
+html:not(.dark) body:has(#three-d-scroll-bg) .text-midnight,
+html:not(.dark) body:has(#three-d-scroll-bg) .text-slate-900,
+html:not(.dark) body:has(#three-d-scroll-bg) .text-slate-950 {
+  color: #0f172a !important; /* Deep dark slate */
+}
+html:not(.dark) body:has(#three-d-scroll-bg) p,
+html:not(.dark) body:has(#three-d-scroll-bg) .text-slate-600,
+html:not(.dark) body:has(#three-d-scroll-bg) .text-slate-500 {
+  color: #334155 !important; /* Dark grey */
+}
+
+/* Dark Theme Contrast */
+html.dark body:has(#three-d-scroll-bg) h1,
+html.dark body:has(#three-d-scroll-bg) h2,
+html.dark body:has(#three-d-scroll-bg) h3,
+html.dark body:has(#three-d-scroll-bg) h4,
+html.dark body:has(#three-d-scroll-bg) h5,
+html.dark body:has(#three-d-scroll-bg) h6,
+html.dark body:has(#three-d-scroll-bg) .text-midnight,
+html.dark body:has(#three-d-scroll-bg) .text-slate-900,
+html.dark body:has(#three-d-scroll-bg) .text-slate-950,
+html.dark body:has(#three-d-scroll-bg) .text-navy-950 {
+  color: #ffffff !important; /* Solid white */
+}
+html.dark body:has(#three-d-scroll-bg) p,
+html.dark body:has(#three-d-scroll-bg) span,
+html.dark body:has(#three-d-scroll-bg) .text-slate-600,
+html.dark body:has(#three-d-scroll-bg) .text-slate-500 {
+  color: #cbd5e1 !important; /* Cool grey */
+}
+
+/* ==========================================================================
+   ELFSIGHT WIDGET OVERRIDES
+   ========================================================================== */
+/* Hide the Elfsight Free Badge/Watermark */
+a[href*="elfsight.com"],
+a[href*="apps.elfsight.com"],
+.eapps-link,
+.eapps-widget-toolbar,
+[class*="Badge-module"] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}

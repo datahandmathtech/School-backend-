@@ -1,0 +1,35 @@
+﻿[dotenv@17.2.3] injecting env (8) from taxi-fleet-crm\backend\.env -- tip: ΓÜÖ∩╕Å  suppress all logs with { quiet: true }
+Γ£à Connected to MongoDB
+
+=== 1. FREELANCER ATTENDANCE (30-Mar-2026) ===
+Total attendances on 2026-03-30: 10
+Freelancer attendances: 0
+
+=== 2. ALL ATTENDANCES ON 30-MAR-2026 ===
+  Driver: Shailendra, isFreelancer: false, wage: 400, bonuses: 0, parking: 0
+  Driver: Arjun Bhat, isFreelancer: false, wage: 400, bonuses: 500, parking: 0
+  Driver: Kailash Bhatt, isFreelancer: false, wage: 500, bonuses: 0, parking: 0
+  Driver: Gopal Audichiy, isFreelancer: false, wage: 400, bonuses: 100, parking: 0
+  Driver: Piyush Menaria, isFreelancer: false, wage: 400, bonuses: 0, parking: 0
+  Driver: Khushal Rav, isFreelancer: false, wage: 400, bonuses: 0, parking: 0
+  Driver: Bharat , isFreelancer: false, wage: 400, bonuses: 500, parking: 0
+  Driver: Khagendra, isFreelancer: false, wage: 400, bonuses: 0, parking: 0
+  Driver: Khagendra, isFreelancer: false, wage: 499, bonuses: 0, parking: 0
+  Driver: Gopal Audichiy, isFreelancer: false, wage: 400, bonuses: 0, parking: 0
+
+=== 3. OUTSIDE CAR VOUCHERS (#2026-03-30) ===
+Outside car vouchers found: 4
+  carNumber: RJ-06-TA-2493#2026-03-30#DFPP6, dutyAmount: 0
+  carNumber: RJ 30 TA 1724#2026-03-30#QG1JG, dutyAmount: 0
+  carNumber: 2364#2026-03-30#K1CKU, dutyAmount: 1400
+  carNumber: 2364#2026-03-30#H4K9N, dutyAmount: 1465
+
+  Outside voucher salary total: Γé╣2865
+
+=== 4. SUMMARY - HOW Γé╣2,865 IS CALCULATED ===
+  Outside voucher contribution: Γé╣2865
+
+  TOTAL FREELANCER SALARY = Γé╣2865
+  (Expected in Live Feed: Γé╣2,865)
+
+Γ£à Done

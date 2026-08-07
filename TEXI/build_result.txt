@@ -1,0 +1,53 @@
+
+> client@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[33m[plugin vite:esbuild] src/pages/Freelancers.jsx: [33mDuplicate key "border" in object literal[33m
+1238 |                                                  color: advanceData.advanceType === type ? '#818cf8' : 'rgba(255,255,2...
+1239 |                                                  fontWeight: '900', fontSize: '12px', cursor: 'pointer',
+1240 |                                                  border: advanceData.advanceType === type ? '1px solid rgba(99, 102, 2...
+     |                                                  ^
+1241 |                                              }}
+1242 |                                          >
+[39m
+[32mG£τ[39m 2406 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                          [39m[1m[2m    1.44 kB[22m[1m[22m[2m Gφι gzip:   0.70 kB[22m
+[2mdist/[22m[35massets/index-CZ0Nx0Ov.css           [39m[1m[2m   22.48 kB[22m[1m[22m[2m Gφι gzip:   4.80 kB[22m
+[2mdist/[22m[36massets/xlsx.min-CEIpZxOS.js         [39m[1m[2m    0.50 kB[22m[1m[22m[2m Gφι gzip:   0.36 kB[22m
+[2mdist/[22m[36massets/SEO-BpiynFMP.js              [39m[1m[2m    1.14 kB[22m[1m[22m[2m Gφι gzip:   0.51 kB[22m
+[2mdist/[22m[36massets/Login-DtBqu2VC.js            [39m[1m[2m    3.02 kB[22m[1m[22m[2m Gφι gzip:   1.24 kB[22m
+[2mdist/[22m[36massets/Admins-vq1Uj5LH.js           [39m[1m[2m    6.65 kB[22m[1m[22m[2m Gφι gzip:   2.07 kB[22m
+[2mdist/[22m[36massets/StaffPortal-DSTA76iN.js      [39m[1m[2m    8.25 kB[22m[1m[22m[2m Gφι gzip:   2.62 kB[22m
+[2mdist/[22m[36massets/Fastag-ByWzieXc.js           [39m[1m[2m   15.33 kB[22m[1m[22m[2m Gφι gzip:   4.08 kB[22m
+[2mdist/[22m[36massets/BorderTax-JdpD87f9.js        [39m[1m[2m   15.38 kB[22m[1m[22m[2m Gφι gzip:   4.24 kB[22m
+[2mdist/[22m[36massets/ActiveLogs-DDFpLuLb.js       [39m[1m[2m   16.25 kB[22m[1m[22m[2m Gφι gzip:   4.22 kB[22m
+[2mdist/[22m[36massets/Staff-CG9Y_J6B.js            [39m[1m[2m   16.53 kB[22m[1m[22m[2m Gφι gzip:   3.97 kB[22m
+[2mdist/[22m[36massets/DriverSalaries-Bqq5S8aE.js   [39m[1m[2m   19.30 kB[22m[1m[22m[2m Gφι gzip:   4.23 kB[22m
+[2mdist/[22m[36massets/Advances-DxM5j3o4.js         [39m[1m[2m   21.11 kB[22m[1m[22m[2m Gφι gzip:   4.83 kB[22m
+[2mdist/[22m[36massets/purify.es-Bzr520pe.js        [39m[1m[2m   22.45 kB[22m[1m[22m[2m Gφι gzip:   8.63 kB[22m
+[2mdist/[22m[36massets/Warranties-COIbJ2XC.js       [39m[1m[2m   23.52 kB[22m[1m[22m[2m Gφι gzip:   5.37 kB[22m
+[2mdist/[22m[36massets/OutsideCars-BUvaWMaz.js      [39m[1m[2m   25.85 kB[22m[1m[22m[2m Gφι gzip:   6.05 kB[22m
+[2mdist/[22m[36massets/Maintenance-zQJbAuMJ.js      [39m[1m[2m   28.81 kB[22m[1m[22m[2m Gφι gzip:   6.10 kB[22m
+[2mdist/[22m[36massets/Vehicles-BBwaeKlD.js         [39m[1m[2m   30.00 kB[22m[1m[22m[2m Gφι gzip:   6.72 kB[22m
+[2mdist/[22m[36massets/AdminDashboard-ZKtoZhBq.js   [39m[1m[2m   35.49 kB[22m[1m[22m[2m Gφι gzip:   8.21 kB[22m
+[2mdist/[22m[36massets/Drivers-B2KkWkZv.js          [39m[1m[2m   36.70 kB[22m[1m[22m[2m Gφι gzip:   6.26 kB[22m
+[2mdist/[22m[36massets/Parking-DBMzdsFE.js          [39m[1m[2m   41.25 kB[22m[1m[22m[2m Gφι gzip:   8.62 kB[22m
+[2mdist/[22m[36massets/Fuel-qQAvWqQu.js             [39m[1m[2m   41.85 kB[22m[1m[22m[2m Gφι gzip:   8.11 kB[22m
+[2mdist/[22m[36massets/Reports-CW4gXmUI.js          [39m[1m[2m   45.98 kB[22m[1m[22m[2m Gφι gzip:  10.07 kB[22m
+[2mdist/[22m[36massets/Freelancers-SzjGvZxf.js      [39m[1m[2m   47.30 kB[22m[1m[22m[2m Gφι gzip:   9.76 kB[22m
+[2mdist/[22m[36massets/index-BCN5SshI.js            [39m[1m[2m   77.60 kB[22m[1m[22m[2m Gφι gzip:  28.42 kB[22m
+[2mdist/[22m[36massets/index.es-C7v2JTx5.js         [39m[1m[2m  158.67 kB[22m[1m[22m[2m Gφι gzip:  52.98 kB[22m
+[2mdist/[22m[36massets/html2canvas.esm-DXEQVQnt.js  [39m[1m[2m  201.04 kB[22m[1m[22m[2m Gφι gzip:  47.43 kB[22m
+[2mdist/[22m[36massets/vendor-BXfTzn-0.js           [39m[1m[2m  293.15 kB[22m[1m[22m[2m Gφι gzip:  96.75 kB[22m
+[2mdist/[22m[36massets/DriverPortal-DwRMXhFN.js     [39m[1m[2m  463.40 kB[22m[1m[22m[2m Gφι gzip: 145.34 kB[22m
+[2mdist/[22m[36massets/excel-CRHyTskB.js            [39m[1m[33m1,158.01 kB[39m[22m[2m Gφι gzip: 419.49 kB[22m
+[33m
+(!) Some chunks are larger than 1000 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32mG£τ built in 16.36s[39m
