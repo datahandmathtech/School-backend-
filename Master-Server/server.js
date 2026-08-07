@@ -1,8 +1,24 @@
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const vhost = require('vhost');
-const { spawn, fork } = require('child_process');
+const { Worker } = require('worker_threads');
+const fs = require('fs');
 const path = require('path');
+
+// Helper to manually parse .env files since process.cwd() is shared in workers
+function parseEnv(filePath) {
+    const env = {};
+    if (fs.existsSync(filePath)) {
+        const lines = fs.readFileSync(filePath, 'utf8').split('\n');
+        lines.forEach(line => {
+            const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+            if (match) {
+                env[match[1]] = match[2].trim().replace(/^['"]|['"]$/g, '');
+            }
+        });
+    }
+    return env;
+}
 const cors = require('cors');
 
 const app = express();
@@ -97,29 +113,22 @@ projects.forEach((proj) => {
     if (proj.type === 'proxy') {
         console.log(`Starting ${proj.id} on port ${proj.port}...`);
         
-        // Use child_process.fork for Node.js scripts to bypass Hostinger CageFS / bin/sh restrictions
-        let child;
-        if (proj.command === 'node') {
-            const scriptPath = path.join(proj.cwd, proj.args[0]);
-            const scriptArgs = proj.args.slice(1);
-            child = fork(scriptPath, scriptArgs, {
-                cwd: proj.cwd,
-                env: { ...process.env, PORT: proj.port },
-                execPath: 'node', // Force 'node' from PATH instead of absolute process.execPath which is blocked by CageFS
-                silent: true // Equivalent to stdio: 'pipe', required to capture stdout/stderr
-            });
-        } else {
-            child = spawn(proj.command, proj.args, {
-                cwd: proj.cwd,
-                env: { ...process.env, PORT: proj.port },
-                shell: false
-            });
-        }
+        const scriptPath = path.join(proj.cwd, proj.args[0]);
+        const envPath = path.join(proj.cwd, '.env');
+        const parsedEnv = parseEnv(envPath);
+
+        // Run backends inside isolated Worker Threads to bypass Hostinger's spawn/fork block
+        const worker = new Worker(scriptPath, {
+            env: { ...process.env, ...parsedEnv, PORT: proj.port },
+            stdout: true,
+            stderr: true
+        });
 
         // Forward logs to main console
-        child.stdout.on('data', (data) => console.log(`[${proj.id}] ${data.toString().trim()}`));
-        child.stderr.on('data', (data) => console.error(`[${proj.id} ERROR] ${data.toString().trim()}`));
-        child.on('close', (code) => console.log(`[${proj.id}] exited with code ${code}`));
+        worker.stdout.on('data', (data) => console.log(`[${proj.id}] ${data.toString().trim()}`));
+        worker.stderr.on('data', (data) => console.error(`[${proj.id} ERROR] ${data.toString().trim()}`));
+        worker.on('error', (err) => console.error(`[${proj.id} FATAL]`, err));
+        worker.on('exit', (code) => console.log(`[${proj.id}] exited with code ${code}`));
 
         // Set up Express vhost to proxy traffic
         const proxyApp = express();
