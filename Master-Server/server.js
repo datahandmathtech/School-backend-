@@ -97,11 +97,12 @@ projects.forEach((proj) => {
     if (proj.type === 'proxy') {
         console.log(`Starting ${proj.id} on port ${proj.port}...`);
         
-        // Spawn the child process
-        const child = spawn(proj.command, proj.args, {
+        // Spawn the child process using process.execPath to avoid shell dependency in Hostinger
+        const nodeExecutable = proj.command === 'node' ? process.execPath : proj.command;
+        const child = spawn(nodeExecutable, proj.args, {
             cwd: proj.cwd,
             env: { ...process.env, PORT: proj.port }, // Override the port dynamically
-            shell: true // Required on Windows for commands like npm
+            shell: false
         });
 
         // Forward logs to main console
