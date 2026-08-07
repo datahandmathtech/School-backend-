@@ -1,7 +1,7 @@
 const express = require('express');
 const { createProxyMiddleware } = require('http-proxy-middleware');
 const vhost = require('vhost');
-const { spawn } = require('child_process');
+const { spawn, fork } = require('child_process');
 const path = require('path');
 const cors = require('cors');
 
@@ -97,13 +97,23 @@ projects.forEach((proj) => {
     if (proj.type === 'proxy') {
         console.log(`Starting ${proj.id} on port ${proj.port}...`);
         
-        // Spawn the child process using process.execPath to avoid shell dependency in Hostinger
-        const nodeExecutable = proj.command === 'node' ? process.execPath : proj.command;
-        const child = spawn(nodeExecutable, proj.args, {
-            cwd: proj.cwd,
-            env: { ...process.env, PORT: proj.port }, // Override the port dynamically
-            shell: false
-        });
+        // Use child_process.fork for Node.js scripts to bypass Hostinger CageFS / bin/sh restrictions
+        let child;
+        if (proj.command === 'node') {
+            const scriptPath = path.join(proj.cwd, proj.args[0]);
+            const scriptArgs = proj.args.slice(1);
+            child = fork(scriptPath, scriptArgs, {
+                cwd: proj.cwd,
+                env: { ...process.env, PORT: proj.port },
+                silent: true // Equivalent to stdio: 'pipe', required to capture stdout/stderr
+            });
+        } else {
+            child = spawn(proj.command, proj.args, {
+                cwd: proj.cwd,
+                env: { ...process.env, PORT: proj.port },
+                shell: false
+            });
+        }
 
         // Forward logs to main console
         child.stdout.on('data', (data) => console.log(`[${proj.id}] ${data.toString().trim()}`));
