@@ -121,11 +121,6 @@ console.log("=========================================");
 // --- SPAWN PROCESSES & SETUP ROUTING ---
 projects.forEach((proj) => {
     if (proj.type === 'proxy') {
-        // [TESTING RAM LIMIT] Disable all backends EXCEPT logkaro
-        if (proj.id !== 'logkaro-backend') {
-            console.log(`[TESTING] Skipping ${proj.id} to save RAM`);
-            return;
-        }
 
         console.log(`Starting ${proj.id} on port ${proj.port}...`);
         
