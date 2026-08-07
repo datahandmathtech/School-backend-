@@ -1,7 +1,7 @@
 node_modules/
 logs/
 *.log
-.env
+# .env
 
 **/.next/cache/
 **/mongodb_data/
