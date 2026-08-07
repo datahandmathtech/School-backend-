@@ -108,6 +108,16 @@ const projects = [
     }
 ];
 
+console.log("=========================================");
+console.log("HOSTINGER DEBUG: Contents of Root Dir:");
+try {
+    console.log(fs.readdirSync(__dirname));
+    console.log("Contents of TEXI:", fs.readdirSync(path.join(__dirname, 'TEXI')));
+} catch (e) {
+    console.error("DEBUG ERROR:", e.message);
+}
+console.log("=========================================");
+
 // --- SPAWN PROCESSES & SETUP ROUTING ---
 projects.forEach((proj) => {
     if (proj.type === 'proxy') {
