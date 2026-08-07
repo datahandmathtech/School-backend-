@@ -39,7 +39,7 @@ const projects = [
     {
         id: 'auto-frontend',
         domain: 'auto.local', // Change to real domain if you have one for auto
-        cwd: path.join(__dirname, '../Auto/frontend/dist'), 
+        cwd: path.join(__dirname, '../Auto/frontend/build_dist'), 
         type: 'static'
     },
     // ---------------- EMJAY BREWERY ----------------
@@ -55,7 +55,7 @@ const projects = [
     {
         id: 'emjay-frontend',
         domain: 'oms.emjaybrewery.in',
-        cwd: path.join(__dirname, '../Emjay Brewery/frontend/out'),
+        cwd: path.join(__dirname, '../Emjay Brewery/frontend/build_dist'),
         type: 'static'
     },
     // ---------------- YATREE DESTINATION ----------------
@@ -71,7 +71,7 @@ const projects = [
     {
         id: 'yatree-frontend',
         domain: 'yatreedestination.com',
-        cwd: path.join(__dirname, '../TEXI/yatree-frontend-/dist'), 
+        cwd: path.join(__dirname, '../TEXI/yatree-frontend-/build_dist'), 
         type: 'static'
     },
     // ---------------- UNNATI ARTS ----------------
@@ -87,7 +87,7 @@ const projects = [
     {
         id: 'unnati-frontend',
         domain: 'unnati.yatreedestination.com',
-        cwd: path.join(__dirname, '../Unnati Arts/frontend/dist'), 
+        cwd: path.join(__dirname, '../Unnati Arts/frontend/build_dist'), 
         type: 'static'
     },
     // ---------------- LOGKARO (TAXI FLEET CRM) ----------------
@@ -103,7 +103,7 @@ const projects = [
     {
         id: 'logkaro-frontend',
         domain: 'logkaro.com',
-        cwd: path.join(__dirname, '../TEXI/taxi-fleet-crm/client/dist'), 
+        cwd: path.join(__dirname, '../TEXI/taxi-fleet-crm/client/build_dist'), 
         type: 'static'
     }
 ];
