@@ -105,6 +105,7 @@ projects.forEach((proj) => {
             child = fork(scriptPath, scriptArgs, {
                 cwd: proj.cwd,
                 env: { ...process.env, PORT: proj.port },
+                execPath: 'node', // Force 'node' from PATH instead of absolute process.execPath which is blocked by CageFS
                 silent: true // Equivalent to stdio: 'pipe', required to capture stdout/stderr
             });
         } else {
