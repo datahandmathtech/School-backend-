@@ -30,7 +30,7 @@ const projects = [
     {
         id: 'auto-backend',
         domain: 'api.auto.local', // Change to real domain if you have one for auto
-        cwd: path.join(__dirname, '../Auto/backend'),
+        cwd: path.join(__dirname, './Auto/backend'),
         command: 'node',
         args: ['server.js'],
         port: 3001,
@@ -39,14 +39,14 @@ const projects = [
     {
         id: 'auto-frontend',
         domain: 'auto.local', // Change to real domain if you have one for auto
-        cwd: path.join(__dirname, '../Auto/frontend/build_dist'), 
+        cwd: path.join(__dirname, './Auto/frontend/build_dist'), 
         type: 'static'
     },
     // ---------------- EMJAY BREWERY ----------------
     {
         id: 'emjay-backend',
         domain: 'api.oms.emjaybrewery.in',
-        cwd: path.join(__dirname, '../Emjay Brewery/backend'),
+        cwd: path.join(__dirname, './Emjay Brewery/backend'),
         command: 'node',
         args: ['index.js'],
         port: 3002,
@@ -55,14 +55,14 @@ const projects = [
     {
         id: 'emjay-frontend',
         domain: 'oms.emjaybrewery.in',
-        cwd: path.join(__dirname, '../Emjay Brewery/frontend/build_dist'),
+        cwd: path.join(__dirname, './Emjay Brewery/frontend/build_dist'),
         type: 'static'
     },
     // ---------------- YATREE DESTINATION ----------------
     {
         id: 'yatree-backend',
         domain: 'api.yatreedestination.com',
-        cwd: path.join(__dirname, '../TEXI/yatree-backend'), 
+        cwd: path.join(__dirname, './TEXI/yatree-backend'), 
         command: 'node',
         args: ['server.js'], 
         port: 3004,
@@ -71,14 +71,14 @@ const projects = [
     {
         id: 'yatree-frontend',
         domain: 'yatreedestination.com',
-        cwd: path.join(__dirname, '../TEXI/yatree-frontend-/build_dist'), 
+        cwd: path.join(__dirname, './TEXI/yatree-frontend-/build_dist'), 
         type: 'static'
     },
     // ---------------- UNNATI ARTS ----------------
     {
         id: 'unnati-backend',
         domain: 'api.unnati.yatreedestination.com',
-        cwd: path.join(__dirname, '../Unnati Arts/backend'), 
+        cwd: path.join(__dirname, './Unnati Arts/backend'), 
         command: 'node',
         args: ['dist/index.js'],
         port: 3005,
@@ -87,14 +87,14 @@ const projects = [
     {
         id: 'unnati-frontend',
         domain: 'unnati.yatreedestination.com',
-        cwd: path.join(__dirname, '../Unnati Arts/frontend/build_dist'), 
+        cwd: path.join(__dirname, './Unnati Arts/frontend/build_dist'), 
         type: 'static'
     },
     // ---------------- LOGKARO (TAXI FLEET CRM) ----------------
     {
         id: 'logkaro-backend',
         domain: 'api.logkaro.com',
-        cwd: path.join(__dirname, '../TEXI/taxi-fleet-crm'), 
+        cwd: path.join(__dirname, './TEXI/taxi-fleet-crm'), 
         command: 'node',
         args: ['server.js'],
         port: 3006,
@@ -103,7 +103,7 @@ const projects = [
     {
         id: 'logkaro-frontend',
         domain: 'logkaro.com',
-        cwd: path.join(__dirname, '../TEXI/taxi-fleet-crm/client/build_dist'), 
+        cwd: path.join(__dirname, './TEXI/taxi-fleet-crm/client/build_dist'), 
         type: 'static'
     }
 ];
