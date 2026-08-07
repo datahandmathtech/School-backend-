@@ -130,6 +130,7 @@ projects.forEach((proj) => {
         // Run backends inside isolated Worker Threads to bypass Hostinger's spawn/fork block
         const worker = new Worker(scriptPath, {
             env: { ...process.env, ...parsedEnv, PORT: proj.port },
+            execArgv: [], // Critical: Strip Hostinger's LSNode wrapper from worker threads
             stdout: true,
             stderr: true
         });
