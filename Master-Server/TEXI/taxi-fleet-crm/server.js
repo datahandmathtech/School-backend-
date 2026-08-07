@@ -6,7 +6,7 @@ const dotenv = require('dotenv');
 try {
     const envPath = path.join(__dirname, '.env');
     if (fs.existsSync(envPath)) {
-        dotenv.config({ path: envPath, override: true });
+        dotenv.config({ path: envPath }); // Removed override: true
         console.log(`Loaded .env from: ${envPath}`);
     }
 } catch (e) {
