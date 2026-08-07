@@ -4,10 +4,10 @@ const dotenv = require('dotenv');
 // Version: 1.0.5 - Enhanced Logging
 const path = require('path');
 // Try loading from default CWD first, then fallback to explicit path
-const result = dotenv.config({ override: true });
+const result = dotenv.config(); // Removed override: true
 if (result.error) {
     console.log('Default .env load failed, trying explicit path...');
-    dotenv.config({ path: path.join(__dirname, '../.env'), override: true });
+    dotenv.config({ path: path.join(__dirname, '../.env') }); // Removed override: true
 }
 
 console.log('--- SERVER STARTUP ---');
