@@ -167,6 +167,11 @@ projects.forEach((proj) => {
     }
 });
 
+// Catch-all fallback to debug if the server is actually responding
+app.use((req, res) => {
+    res.status(200).send(`<h1>Master Proxy is ALIVE!</h1><p>But no domain matched your request: <b>${req.hostname}</b></p>`);
+});
+
 // Start the Master Server
 const MASTER_PORT = process.env.PORT || 8080;
 app.listen(MASTER_PORT, () => {
