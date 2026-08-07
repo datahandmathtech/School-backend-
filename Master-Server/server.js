@@ -62,7 +62,7 @@ const projects = [
     {
         id: 'yatree-backend',
         domain: 'api.yatreedestination.com',
-        cwd: path.join(__dirname, './TEXI/yatree-backend'), 
+        cwd: path.join(__dirname, './Smokey Jo\'s Cafe/Yatree- Destination/server'), 
         command: 'node',
         args: ['server.js'], 
         port: 3004,
@@ -71,7 +71,7 @@ const projects = [
     {
         id: 'yatree-frontend',
         domain: 'yatreedestination.com',
-        cwd: path.join(__dirname, './TEXI/yatree-frontend-/build_dist'), 
+        cwd: path.join(__dirname, './Smokey Jo\'s Cafe/Yatree- Destination/client/build_dist'), 
         type: 'static'
     },
     // ---------------- UNNATI ARTS ----------------
