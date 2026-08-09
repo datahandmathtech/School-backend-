@@ -106,7 +106,7 @@ export default async function ProgrammaticPage({ params }: PageProps) {
       {/* Dynamic Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-midnight">
         <div className="absolute inset-0 bg-gradient-to-b from-midnight/60 via-midnight/40 to-midnight z-10" />
-        <div className="absolute inset-0 bg-[url('/premium_udaipur_taxi_hero_1778818369975.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url(/premium_udaipur_taxi_hero_1778818369975.png)] bg-cover bg-center" />
         
         <div className="container mx-auto px-4 relative z-20 text-center mt-10">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 tracking-tight leading-[1.1]">

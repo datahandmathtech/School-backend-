@@ -1,0 +1,3 @@
+module.exports=[34098,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Wedding Car Rental Udaipur",description:"Luxury wedding car rentals and complete guest transportation logistics."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Wedding Car Rental Udaipur","Luxury wedding car rentals and complete guest transportation logistics.","800"))}})]})},"metadata",0,d])},47060,a=>{a.n(a.i(34098))}];
+
+//# sourceMappingURL=client_src_app_wedding-car-rental-udaipur_layout_tsx_0n5zvtq._.js.map

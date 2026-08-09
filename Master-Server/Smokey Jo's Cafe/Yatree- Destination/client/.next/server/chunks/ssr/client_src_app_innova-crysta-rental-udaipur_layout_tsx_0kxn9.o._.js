@@ -1,0 +1,3 @@
+module.exports=[33726,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Innova Crysta Rental Udaipur",description:"Rent a luxury Toyota Innova Crysta in Udaipur."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Innova Crysta Rental Udaipur","Rent a luxury Toyota Innova Crysta in Udaipur.","800"))}})]})},"metadata",0,d])},14182,a=>{a.n(a.i(33726))}];
+
+//# sourceMappingURL=client_src_app_innova-crysta-rental-udaipur_layout_tsx_0kxn9.o._.js.map

@@ -1,0 +1,3 @@
+module.exports=[2378,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Cab Service in Udaipur",description:"Premium cab service in Udaipur for local sightseeing and outstation trips."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Cab Service in Udaipur","Premium cab service in Udaipur for local sightseeing and outstation trips.","800"))}})]})},"metadata",0,d])},85608,a=>{a.n(a.i(2378))}];
+
+//# sourceMappingURL=client_src_app_cab-service-in-udaipur_layout_tsx_0h3hl4w._.js.map

@@ -1,0 +1,3 @@
+module.exports=[39888,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Taxi Service in Udaipur",description:"Udaipur's #1 Taxi Service. Book reliable cabs for local sightseeing."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Taxi Service in Udaipur","Udaipur's #1 Taxi Service. Book reliable cabs for local sightseeing.","800"))}})]})},"metadata",0,d])},6230,a=>{a.n(a.i(39888))}];
+
+//# sourceMappingURL=client_src_app_taxi-service-in-udaipur_layout_tsx_052an-5._.js.map

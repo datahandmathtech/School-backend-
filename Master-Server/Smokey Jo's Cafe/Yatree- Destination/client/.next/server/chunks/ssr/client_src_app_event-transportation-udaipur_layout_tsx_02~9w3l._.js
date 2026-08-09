@@ -1,0 +1,3 @@
+module.exports=[75205,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Event Transportation Udaipur",description:"Reliable event and conference transportation in Udaipur."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Event Transportation Udaipur","Reliable event and conference transportation in Udaipur.","800"))}})]})},"metadata",0,d])},86236,a=>{a.n(a.i(75205))}];
+
+//# sourceMappingURL=client_src_app_event-transportation-udaipur_layout_tsx_02~9w3l._.js.map

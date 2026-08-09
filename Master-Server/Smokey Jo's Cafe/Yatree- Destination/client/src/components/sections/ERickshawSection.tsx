@@ -51,7 +51,7 @@ export default function ERickshawSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[40%] bg-gold-premium/10 blur-[120px] rounded-full animate-pulse" />
         <div className="absolute bottom-[10%] right-[-5%] w-[30%] h-[30%] bg-blue-500/5 blur-[100px] rounded-full" />
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] pointer-events-none" />
+        <div className="absolute inset-0 bg-[url(https://www.transparenttextures.com/patterns/carbon-fibre.png)] opacity-[0.03] pointer-events-none" />
       </div>
 
       <div className="container-custom relative z-10">

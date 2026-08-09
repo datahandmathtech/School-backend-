@@ -1,0 +1,3 @@
+module.exports=[94266,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Tempo Traveller in Udaipur",description:"Rent luxury Tempo Travellers in Udaipur for group tours."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Tempo Traveller in Udaipur","Rent luxury Tempo Travellers in Udaipur for group tours.","800"))}})]})},"metadata",0,d])},46498,a=>{a.n(a.i(94266))}];
+
+//# sourceMappingURL=client_src_app_tempo-traveller-udaipur_layout_tsx_0araz-s._.js.map

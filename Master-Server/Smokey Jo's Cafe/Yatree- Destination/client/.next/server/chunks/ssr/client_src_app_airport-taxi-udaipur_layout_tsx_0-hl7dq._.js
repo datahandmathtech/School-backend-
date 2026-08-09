@@ -1,0 +1,3 @@
+module.exports=[61939,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Airport Taxi Udaipur",description:"Reliable and punctual airport taxi transfers in Udaipur."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Airport Taxi Udaipur","Reliable and punctual airport taxi transfers in Udaipur.","800"))}})]})},"metadata",0,d])},62786,a=>{a.n(a.i(61939))}];
+
+//# sourceMappingURL=client_src_app_airport-taxi-udaipur_layout_tsx_0-hl7dq._.js.map

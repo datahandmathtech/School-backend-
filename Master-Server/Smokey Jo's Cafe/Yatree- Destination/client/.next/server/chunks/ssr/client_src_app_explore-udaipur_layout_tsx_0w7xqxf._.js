@@ -1,0 +1,3 @@
+module.exports=[75821,a=>{"use strict";var b=a.i(39100);let c=(0,a.i(75903).constructMetadata)({title:"Explore Udaipur",description:"Discover the magic of the City of Lakes with local expert guides."});a.s(["default",0,function({children:a}){return(0,b.jsx)(b.Fragment,{children:a})},"metadata",0,c])},6089,a=>{a.n(a.i(75821))}];
+
+//# sourceMappingURL=client_src_app_explore-udaipur_layout_tsx_0w7xqxf._.js.map

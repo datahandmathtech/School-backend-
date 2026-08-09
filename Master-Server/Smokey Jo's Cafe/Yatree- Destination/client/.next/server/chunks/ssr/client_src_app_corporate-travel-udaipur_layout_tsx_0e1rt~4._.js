@@ -1,0 +1,3 @@
+module.exports=[13790,a=>{"use strict";var b=a.i(39100),c=a.i(75903);let d=(0,c.constructMetadata)({title:"Corporate Travel in Udaipur",description:"B2B corporate travel solutions in Udaipur. Premium fleet, GST billing."});a.s(["default",0,function({children:a}){return(0,b.jsxs)(b.Fragment,{children:[a,(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify((0,c.getServiceSchema)("Corporate Travel in Udaipur","B2B corporate travel solutions in Udaipur. Premium fleet, GST billing.","800"))}})]})},"metadata",0,d])},63113,a=>{a.n(a.i(13790))}];
+
+//# sourceMappingURL=client_src_app_corporate-travel-udaipur_layout_tsx_0e1rt~4._.js.map

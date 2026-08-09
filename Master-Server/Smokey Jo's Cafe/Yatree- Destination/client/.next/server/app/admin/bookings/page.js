@@ -1,0 +1,13 @@
+var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/admin/bookings/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0z8w8mt._.js")
+R.c("server/chunks/ssr/059b_next_dist_esm_build_templates_app-page_0_r-~y7.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0h6c92c._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0qiae.6._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__07h3_w.._.js")
+R.c("server/chunks/ssr/059b_next_dist_client_components_0pdm3yu._.js")
+R.c("server/chunks/ssr/059b_next_dist_client_components_builtin_forbidden_0u2kc~1.js")
+R.c("server/chunks/ssr/059b_next_dist_client_components_builtin_unauthorized_0pyp_-w.js")
+R.c("server/chunks/ssr/059b_next_dist_client_components_builtin_global-error_0qpp3fo.js")
+R.c("server/chunks/ssr/client__next-internal_server_app_admin_bookings_page_actions_0pwtlg-.js")
+R.m(18097)
+module.exports=R.m(18097).exports
