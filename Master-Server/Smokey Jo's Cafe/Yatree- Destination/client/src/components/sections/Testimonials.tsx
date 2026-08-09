@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 import { Star } from "lucide-react";
 import { useEffect } from "react";
 
@@ -21,7 +20,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#eef2f6] to-[#f8fafc] relative overflow-hidden font-sans">
+    <section className="py-24 bg-gradient-to-b from-[#eef2f6] to-[#f8fafc] relative overflow-hidden font-sans w-full border-y border-slate-200/50">
       <div className="container mx-auto px-6 relative z-10">
         
         {/* Header */}
@@ -35,13 +34,13 @@ export default function Testimonials() {
         </div>
 
         {/* Elfsight Google Reviews Widget */}
-        <div className="w-full max-w-7xl mx-auto mb-16 relative elfsight-wrapper">
-          <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
-          <div 
-            className="elfsight-app-8e4e76e9-43cc-4b20-9dfc-e8a6b9a56bb4 relative z-10 w-full" 
+        <div className="w-full max-w-7xl mx-auto mb-16 relative elfsight-wrapper" style={{ height: '450px' }}>
+          <iframe 
+            src="/elfsight-reviews.html" 
+            title="Google Reviews"
+            className="w-full h-full border-0 relative z-10"
             style={{ clipPath: 'inset(-100px -100px 65px -100px)', marginBottom: '-65px' }}
-            data-elfsight-app-lazy
-          ></div>
+          />
         </div>
 
         {/* Leave a Review Button */}

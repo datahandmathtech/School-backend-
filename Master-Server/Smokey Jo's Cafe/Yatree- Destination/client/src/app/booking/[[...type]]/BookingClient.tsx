@@ -5,6 +5,7 @@ import { useParams, useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Testimonials from "@/components/sections/Testimonials";
 import { 
   Car, 
   Bus, 
@@ -266,6 +267,28 @@ function BookingEngine() {
               
               {/* Header Box (Simple clean light theme card) */}
               <div className="bg-white text-slate-950 p-8 rounded-[2rem] border border-slate-200/60 shadow-lg relative overflow-hidden text-left">
+                
+                {/* Google Reviews Badge */}
+                <div className="inline-flex items-center gap-4 bg-slate-50 border border-slate-200 shadow-sm rounded-xl px-4 py-3 mb-6 w-fit">
+                   <div className="flex -space-x-2">
+                       <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center"><User className="w-4 h-4 text-slate-500" /></div>
+                       <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-300 flex items-center justify-center"><User className="w-4 h-4 text-slate-600" /></div>
+                       <div className="w-8 h-8 rounded-full border-2 border-white bg-slate-200 flex items-center justify-center"><User className="w-4 h-4 text-slate-500" /></div>
+                   </div>
+                   <div className="text-left">
+                     <div className="flex items-center gap-2">
+                       <span className="font-bold text-slate-900">4.9/5</span>
+                       <div className="flex gap-0.5">
+                         <Star className="w-4 h-4 text-orange-500 fill-orange-500" />
+                         <Star className="w-4 h-4 text-orange-500 fill-orange-500" />
+                         <Star className="w-4 h-4 text-orange-500 fill-orange-500" />
+                         <Star className="w-4 h-4 text-orange-500 fill-orange-500" />
+                         <Star className="w-4 h-4 text-orange-500 fill-orange-500" />
+                       </div>
+                     </div>
+                     <p className="text-[11px] text-slate-500 font-medium">Trusted by 2500+ Travelers</p>
+                   </div>
+                </div>
                 <div className="flex items-center gap-2 mb-3">
                   <Star className="w-4 h-4 text-gold-premium fill-current animate-pulse" />
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Official Tariffs</span>
@@ -379,8 +402,6 @@ function BookingEngine() {
                   )}
                 </AnimatePresence>
               </div>
-
-
 
             </div>
 
@@ -555,6 +576,10 @@ function BookingEngine() {
 
             </div>
 
+          </div>
+          
+          <div className="mt-16 mb-16 w-screen relative left-1/2 -translate-x-1/2">
+             <Testimonials />
           </div>
 
 {/* ========================================================================= */}
@@ -1244,7 +1269,7 @@ export default function BookingPage() {
   return (
     <main className="relative min-h-screen bg-slate-50 selection:bg-gold-premium selection:text-midnight pt-24">
       <Navbar />
-      
+
       {/* Premium Visual Banner */}
       <div className="hidden md:block bg-slate-950 py-24 px-6 text-center relative overflow-hidden">
         {/* Glow */}
